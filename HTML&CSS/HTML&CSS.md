@@ -38,55 +38,34 @@ CSS Selector
 셀렉터
 	h1 { }
 	div { }
-
 전체 셀렉터
 	* { }
-
-Tag 셀렉터
-	section, h1 { }		( , 로 구분하여 추가)
-
-ID 셀렉터
-	#only { }
-
-class 셀렉터
-	.widget { }
+Tag 셀렉터	section, h1 { }		( , 로 구분하여 추가)
+ID 셀렉터	#only { }
+class 셀렉터	.widget { }
 	.center { }
 
 (	.widget#only { } : 띄어쓰기 없이 ID와class셀렉터를 함께 쓰면 and 조건으로 셀렉	)
-
-attribute 셀렉터 (암기할 필요는 없습니다)
-	a[href] { }
+attribute 셀렉터 (암기할 필요는 없습니다)	a[href] { }
 	p[id="only"] { }
 	p[class~="out"] { }
 	p[class|="out"] { }
 	section[id^="sect"] { }
 	div[class$="2"] { }
 	div[class*="w"] { }
-
-후손 셀렉터
-	header h1 { }		(띄어쓰기로 구분) 
-자식 셀렉터 (후손 셀렉터와의 차이를 반드시 알고 있어야 합니다) 	header > p { }
-
-인접 형제 셀렉터
-	section + p { }
-
-형제 셀렉터
-	section ~ p { }
-
-가상 클래스
-	a:link { }
+후손 셀렉터	header h1 { }		(띄어쓰기로 구분)
+자식 셀렉터 (후손 셀렉터와의 차이를 반드시 알고 있어야 합니다)	header > p { }
+인접 형제 셀렉터	section + p { }
+형제 셀렉터	section ~ p { }
+가상 클래스	a:link { }
 	a:visited { }
 	a:hover { }
 	a:active { }
 	a:focus { }
-
-요소 상태 셀렉터
-	input:checked + span { }
+요소 상태 셀렉터	input:checked + span { }
 	input:enabled + span { }
 	input:disabled + span { }
-
-구조 가상 클래스 셀렉터 (암기할 필요는 없습니다)
-	p:first-child { }
+구조 가상 클래스 셀렉터 (암기할 필요는 없습니다)	p:first-child { }
 	ul > li:last-child { }
 	ul > li:nth-child(2n) { }
 	section > p:nth-child(2n+1) { }
@@ -99,15 +78,10 @@ attribute 셀렉터 (암기할 필요는 없습니다)
 	div:last-of-type { }
 	ul:nth-of-type(2) { }
 	p:nth-last-of-type(1) { }
-
-부정 셀렉터
-	input:not([type="password"]) { }
+부정 셀렉터	input:not([type="password"]) { }
 	div:not(:nth-of-type(2)) { }
-
-정합성 확인 셀렉터
-	input[type="text"]:valid { }
+정합성 확인 셀렉터	input[type="text"]:valid { }
 	input[type="text"]:invalid { }
-
 
 
 
@@ -214,3 +188,6 @@ div 태그 또는 section, header 등의 시맨틱 태그로 영역을 구분하
 반복되는 성향의 요소에’만’ class를 쓰자. 유일요소에는 id를 쓸것
 
 
+
+template 태그
+	이용해보기
