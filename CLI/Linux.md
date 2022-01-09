@@ -20,6 +20,10 @@ Linux
     * sudo: 관리자 권한을 이해할 수 있다.
     * open .  현재 위치를 Finder 로 열기
 
+mkdir hello world >> 폴더 ‘hello’ 와 폴더 ‘wolrd’ 가 각각 생성됨
+mkdir hello\ world >> 폴더 ‘hello world’ 하나 생성 
+
+
 	명령어 옵션 ( 사용법 : 명령어 명령어옵션 ) rm -rf
 -r은 recursive의 약자로 특정 행동을 순환적으로 반복
 -f는 force의 약자로 어떤 행위를 강제 **주의
