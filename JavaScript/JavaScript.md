@@ -1,5 +1,8 @@
 JavaScript
 
+ES6
+http://junil-hwang.com/blog/javascript-es6-spec/
+
 Use namespacing and immediately invoked function expressions.
 Use the "use strict" directive.​
 Declare variables with const and let.​
@@ -220,6 +223,9 @@ arguments 객체는 모든 함수 내에서 이용 가능한 지역 변수
 
 
 내장 고차함수
+
+	
+	slice
 
 
 	forEach
