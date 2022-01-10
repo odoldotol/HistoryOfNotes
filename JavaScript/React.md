@@ -35,6 +35,6 @@ JSX 규칙
 	Create React App 이 무엇인지 대략적으로나마 이해해라. 그리고 만들어진 프로젝트의 구조나 역할도 대략적으로라도 이해해봐라(Index.js, App.js …)
 
 
-%%%
+###
 	npx create-react-app <앱이름> : 새로운 리액트 프로젝트를 시작
 	npm run start : 
