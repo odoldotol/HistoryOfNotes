@@ -1,4 +1,4 @@
-React
+# React
 
 	선언형, 컴포넌트기반, 범용성
 
@@ -16,7 +16,7 @@ JSX 규칙
 
 	JavaScript를 쓰고싶어? -> {JavaScript}
 
-	React 엘리먼트가 JSX로 작성되면 "대문자"로 시작 (사용자 정의 컴포넌트)
+	React 엘리먼트가 JSX로 작성되면 "대문자"로 시작 (사용자 정의 컴포넌트) -> <Sidebar /> (<sidebar /> 는 html 태그로 인식)
 
 	조건부 렌더링은 if문 X , 삼항연산자 O
 		const isUnderstand = understand === ‘yes’

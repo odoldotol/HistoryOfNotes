@@ -1,28 +1,28 @@
-JavaScript
+# JavaScript
 
 ES6
 http://junil-hwang.com/blog/javascript-es6-spec/
 
-Use namespacing and immediately invoked function expressions.
-Use the "use strict" directive.​
-Declare variables with const and let.​
+	Use namespacing and immediately invoked function expressions.
+	Use the "use strict" directive.​
+	Declare variables with const and let.​
 
-
+###
 DOM과 JavaScript의 차이에 대해 이해할 수 있다. (Node vs element) (window)
 
-
-console.log()
-	출력
-console.dir()
-	DOM 을 객체의 모습으로 출력
+###
+	console.log() : 출력
+	console.dir() : DOM 을 객체의 모습으로 출력
 	
 
-속성
-
-	dataset : data-* 속성에 담긴 값
+###
+	doc[key] = value; // doc = {key : value}
+	doc.key
+	doc[index]
 
 
 CRUD
+
 	createElement - CREATE
 		document.createElement('div')
 		const tweetDiv = document.createElement('div')
@@ -295,3 +295,4 @@ Advanced
 * 자바스크립트에서 커링(currying)과 클로저(closure)의 차이 이해하기 (js closure vs curry)
 * 선언형 프로그래밍(declarative programming)과 절차형 프로그래밍(imperative programming)의 차이를 배열 메소드를 통해 이해하기 (js imperative vs declarative)
 * 함수의 조합(function composition)에 대해 학습하기 (javascript function composition)
+

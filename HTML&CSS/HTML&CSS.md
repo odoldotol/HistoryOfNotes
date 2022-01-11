@@ -1,4 +1,4 @@
-HTML&CSS
+# HTML&CSS
 
 
 HTML
@@ -42,7 +42,8 @@ template 태그
 	ex) 하드코딩
 
 
-
+###
+	dataset : data-* 속성에 담긴 값
 
 
 
