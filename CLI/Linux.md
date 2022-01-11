@@ -19,7 +19,7 @@
     - sudo: 관리자 권한을 이해할 수 있다.
     - open .  현재 위치를 Finder 로 열기
 
-####
+######
 	mkdir hello world >> 폴더 ‘hello’ 와 폴더 ‘wolrd’ 가 각각 생성됨
 	mkdir hello\ world >> 폴더 ‘hello world’ 하나 생성 
 
@@ -27,24 +27,21 @@
 	whoami : 현재 로그인된 사용자를 확인
 
 	명령어 옵션 ( 사용법 : 명령어 명령어옵션 ) rm -rf
-    - -r : recursive의 약자로 특정 행동을 순환적으로 반복
-    - -f : force의 약자로 어떤 행위를 강제 **주의
-    - -h ,-help : 도움말 메뉴 (그냥 명령어만 입력해도 도움말 나오는 경우 대부분임)
+    - <명령어> -r : recursive의 약자로 특정 행동을 순환적으로 반복
+    - <명령어> -f : force의 약자로 어떤 행위를 강제 **주의
+    - <명령어> -h ,-help : 도움말 메뉴 (그냥 명령어만 입력해도 도움말 나오는 경우 대부분임)
 
 	명령어를 사용할 때, 등장하는 키워드
     - / : 루트 디렉토리
     - ~ : 홈 디렉토리
-
-	절대 경로와 상대 경로
     - 절대 경로의 시작이 루트 디렉토리(/)
-    - 상대 경로의 시작이 현재 디렉토리(.)
-    - 상위 폴더는 두 개의 점(..)
+    - 상대 경로의 시작이 현재 디렉토리(./)
+    - 상위 폴더(../)
 
 	nano <파일이름> : 텍스트 에디터 nano를 이용해 파일을 수정, 저장. (저장 : ^O)
 
 
 #### nvm
-
     - nvm --version : nvm 버전 확인
     - nvm install --lts : node.js 설치
     - node -v : node.js 버전확인
@@ -54,8 +51,7 @@
 
     - node 파일명 : 파일을 node 환경에서 실행(node 를 런타임으로해서 실행)
 
-#### nvm
-
+#### npm
     - npm install : package.jason 에 적힌 의존성모듈을 모두 다운로드받아서 node_modules 에 저장
     - npm install <모듈이름> --save-dev : 모듈을 다운받고 자동으로 devDependencies에 추가
     - npm install --save <모듈이름> : 모듈을 다운받고 자동으로 dependencies에 추가, (--save 생략가능)
