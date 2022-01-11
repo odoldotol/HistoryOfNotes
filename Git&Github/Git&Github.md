@@ -1,14 +1,11 @@
-Git&Github
+# Git&Github
 
+[마크다운](https://gist.github.com/ihoneymon/652be052a0727ad59601)
 
-* 터미널로 원격 서버에 접속하고 git을 설치하고 삭제 후 다시 설치할 수 있다.
-
-
-
-SSH key 이용하기
-ssh-keygen : ssh 키를 생성
-cat ~/.ssh/id_rsa.pub : ssh 공개키(Public Key)를 출력
-복사하여 GitHub > settings > SSH and GPG keys 에 새로운 키 추가
+######SSH key 이용하기
+    1. ssh-keygen : ssh 키를 생성
+    2. cat ~/.ssh/id_rsa.pub : ssh 공개키(Public Key)를 출력
+    3. 복사하여 GitHub > settings > SSH and GPG keys 에 새로운 키 추가
 
 
 
