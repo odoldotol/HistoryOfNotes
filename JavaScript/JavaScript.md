@@ -17,11 +17,52 @@ DOM과 JavaScript의 차이에 대해 이해할 수 있다. (Node vs element) (w
 
 ###
 	doc[key] = value; // doc = {key : value}
+	
 	doc.key
 	doc[index]
+	
+	object.key = value // key를 알떄
+	object[key] = value // key를 동적으로 결정될떄
+	
+	배열은 index 를 key값으로 가지는 오브젝트다
 
 
-CRUD
+###
+	Array.split()
+	Array.join()
+
+
+
+###
+	for of
+	for in
+
+
+###
+	객체 구조분해
+
+
+
+
+
+### 호이스팅
+
+	인터프리터가 변수와 함수의 “메모리 공간을 선언 전에 미리 할당”
+
+	선언
+		var let const function  …
+	초기화
+		= *; …
+	
+	var : 호이스팅시 할당하고 초기화 -> 선언전에 접근시 undefined
+	let const : 호이스팅시 할당만 하고 초기화는 하지 않음 -> 선언전에 접근시 레퍼런스 오류 발생
+
+
+
+
+
+
+### CRUD
 
 	createElement - CREATE
 		document.createElement('div')
@@ -126,173 +167,4 @@ Array.concat(arr)	// Array의 요소와 arr 의 요소를 순서대로 갖는 �
 
 
 
-
-Function
-
-
-* 함수의 선언과 호출, 그리고 결과값 리턴
-    * 문제를 해결하기 위해 논리(알고리즘)을 컴퓨터가 이해할 수 있도록 코드로 작성할 수 있다.
-    * 함수 표현식과 함수 선언식을 활용하여, 변수에 함수를 할당할 수 있다.
-    * 함수가 담긴 변수에 괄호를 붙여 함수를 호출할 수 있다.
-    * 함수가 결과를 리턴하는 경우와 그렇지 않은 경우를 구별할 수 있다.
-
-
-
-
-Element.matches()
-	var result = element.matches(selectorString);
-
-모듈 사용하기
-	require 함수 이용하여 모듈의 함수를 변수에 넣어 선언하고 변수를 호출하여 사용할 수 있음.
-
-
-
-호이스팅
-	인터프리터가 변수와 함수의 “메모리 공간을 선언 전에 미리 할당”
-
-	선언
-		var let const function  …
-	초기화
-		= *; …
-	
-	var : 호이스팅시 할당하고 초기화 -> 선언전에 접근시 undefined
-	let const : 호이스팅시 할당만 하고 초기화는 하지 않음 -> 선언전에 접근시 레퍼런스 오류 발생
-
-
-
-
-고차 함수 (higher order function)
-	함수를 인자(argument)로 받을 수 있고, 함수의 형태로 리턴할 수 있는 함수
-
-
-1. 다른 함수를 인자로 받는 경우
-
-	function double(num) {
-		return num * 2;
-	}
-
-	function doubleNum(func, num) {
-		return func(num);
-	}
-
-	let output = doubleNum(double, 4);
-	console.log(output); // -> 8
-
-
-2. 함수를 리턴하는 경우
-
-	function adder(added) {
-		return function (num) {
-			return num + added;
-		};
-	}
-
-	let output = adder(5)(3); // -> 8
-	console.log(output); // -> 8
-
-	const add3 = adder(3);
-	output = add3(2);
-	console.log(output); // -> 5
-
-3. 함수를 인자로 받고, 함수를 리턴하는 경우
-
-	function double(num) {
-		return num * 2;
-	}
-
-	function doubleAdder(added, func) {
-		const doubled = func(added);
-		return function (num) {
-			return num + doubled;
-		};
-	}
-
-	doubleAdder(5, double)(3); // -> 13
-
-	const addTwice3 = doubleAdder(3, double);
-	addTwice3(2); // --> 8
-
-
-
-
-
-arguments 객체는 모든 함수 내에서 이용 가능한 지역 변수
-
-
-
-
-
-내장 고차함수
-
-	
-	slice
-
-
-	forEach
-
-
-	find
-
-
-	filter
-		배열의 각 요소를 인자로 쓸수있는 함수가 리턴하는 값이 true 면 남기고 false면 버리고 새로운 배열을 만들어서 리턴한다.
-
-		Array.filter(function(el){
-			~~
-			return boolean
-		})
-
-		filter 메소드에 들어가는 콜백 함수는 truthy 또는 falsy를 리턴할 수 있습니다.
-		그러나 filter 메소드에 들어가는 콜백 함수는 Deep equality를 통해 조건을 명확하게 밝히는 걸 권장합니다.
-		따라서 이 콘텐츠에서도 콜백 함수가 내부 조건에 따라 참(true) 또는 거짓(false)을 리턴하도록 구현하길 권장합니다.
-
-	map
-		배열의 각 요소를 인자로 쓸수있는 함수가 리턴하는 값이 각 요소를 대체하는 새로운 배열을 리턴한다.
-	
-		Array.map(function(el){
-			~~
-			return *
-		})
-
-
-	reduce
-		배열의 각 요소를 cur 로 받고 acc = initialValue 로 시작한다. 리턴하는 값을 acc 로 하고 반복하여 배열을 하나의 값으로 만들어 리턴한다.
-		initialValue 가 없으면 첫번째 요소는 그냥 리턴된다.
-
-		Array.reduce(function(acc, cur){
-			~~
-			return *
-		},initialValue)
-
-
-	sort
-
-
-	some
-
-
-	every
-
-
-
-
-추상화
-	일반적으로 우리가 구현하고 싶은 서비스는 매우 추상적인것에서 출발한다.
-	우리는 구체화를 통해 서비스를 실현 가능하도록 만든다.
-	이에 반해 너무 구체적이고 사소한 것들의 집합은 추상화를 통해 처리해버릴 수 있다.
-	이렇게 하면 우리는 추상화된 것의 아래단에 있는 사소한 것들은 잊어도 된다.
-	마치 컴퓨터가 0101 로 보는것을 우리가 0101로 볼 필요가 없어졌듯이
-	추상화가 잘 될 수록 우리는 더 높은 추상적인 개념에 빨리 도달할 수 있고,
-	결국 우리가 일반적으로 구현하고 싶은 매우 높은 수준의 추상적인 결과물에 가까워 지는것이다.
-
-
-
-
-
-
-Advanced
-* MapReduce 학습하기 (MapReduce Model)
-* 자바스크립트에서 커링(currying)과 클로저(closure)의 차이 이해하기 (js closure vs curry)
-* 선언형 프로그래밍(declarative programming)과 절차형 프로그래밍(imperative programming)의 차이를 배열 메소드를 통해 이해하기 (js imperative vs declarative)
-* 함수의 조합(function composition)에 대해 학습하기 (javascript function composition)
 

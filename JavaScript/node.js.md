@@ -18,3 +18,11 @@
 
 
 
+###
+	npx create-react-app <앱이름> : 새로운 리액트 프로젝트를 시작
+	npm run start : 
+
+	npm install react-router-dom@5.3.0 : React Router DOM을 설치 (@5.3.0 : 버전 , 생략하면 최신버전)
+
+
+
