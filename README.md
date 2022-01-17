@@ -1,5 +1,7 @@
 # HistoryOfNotes
-This is so private that it's useless for you but slightly useful to only me
+이것은 매우 개인적인 기록이라 당신에게 쓸모없을것이다. 심지어 나한테도 *나 거의 쓸모없다.
 
-    I have used Notes App of Apple while studying.
-    Then, I thought it would be fun to record the changes in the Notes.
+    나는 최근 공부하면서 애플의 Notes앱을 쓰곤하는데,
+    앱에 적었다가 지우고 옮기고 하는 변경점들을 기록하면 재미있겠다고 생각해서 전부 복붙해 푸시하면서 시작된것.
+    그래서 마크다운도 전혀 고려되어있지 않지 않아 깃허브에서는 거의 읽을 수 없다.
+    최근에는 노트앱에서 보기 나쁘지 않을 정도로만 조금씩 마크다운을 고려하며 메모를 한다... 매우 이상한 상황이다.
