@@ -7,15 +7,15 @@ http://junil-hwang.com/blog/javascript-es6-spec/
 	Use the "use strict" directive.​
 	Declare variables with const and let.​
 
-###
+#####
 DOM과 JavaScript의 차이에 대해 이해할 수 있다. (Node vs element) (window)
 
-###
+#####
 	console.log() : 출력
 	console.dir() : DOM 을 객체의 모습으로 출력
 	
 
-###
+#####
 	doc[key] = value; // doc = {key : value}
 	
 	doc.key
@@ -27,18 +27,17 @@ DOM과 JavaScript의 차이에 대해 이해할 수 있다. (Node vs element) (w
 	배열은 index 를 key값으로 가지는 오브젝트다
 
 
-###
+#####
 	Array.split()
 	Array.join()
 
 
-
-###
+#####
 	for of
 	for in
 
 
-###
+#####
 	객체 구조분해
 
 
@@ -62,7 +61,7 @@ DOM과 JavaScript의 차이에 대해 이해할 수 있다. (Node vs element) (w
 
 
 
-### CRUD
+## CRUD
 
 	createElement - CREATE
 		document.createElement('div')
@@ -108,7 +107,7 @@ display: none // 브라우저에서 아예 영역조차 사라짐
 
 
 
-Event
+## Event
 
 
 1. 이벤트 핸들러 생성
@@ -150,7 +149,6 @@ onclick 에 직접 할당하는 것과 addEventListener의 차이
 
 
 
-이벤트 객체에 대해서 더 자세히 알고 싶다면, 아래 키워드를 검색해서 학습하세요
 * onsubmit
 * onchange
 * onmouseover
@@ -161,6 +159,7 @@ onclick 에 직접 할당하는 것과 addEventListener의 차이
 
 return value.length >= 4 // boolean 이 리턴됨
 Array.isArray(arr) // boolean
+
 Array.concat(arr)	// Array의 요소와 arr 의 요소를 순서대로 갖는 새로운 하나의 배열
 	= [...Array , …aar] // spread syntax
 

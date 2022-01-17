@@ -14,30 +14,30 @@
 
 
 
-#### 함수 선언(function declaration)
+## 함수 선언(function declaration)
 
 함수 선언(function declaration)은 지정된 매개변수(parameter)를 갖는 함수를 정의
 
 	function name([param[, param,[..., param]]]) { [statements] }
 
-#
+#####
 	선언을 둘러싼 함수의 최상부나 전역 범위(global scope)로 끌어올려짐
 
 
 
 
-#### 함수 표현식(function expression)
+## 함수 표현식(function expression)
 
-var myFunction = function [name]([param1[, param2[, ..., paramN]]]) { statements };
+	var myFunction = function [name]([param1[, param2[, ..., paramN]]]) { statements };
 
-#
+#####
 	익명 함수를 만들 경우 이름을 생략할 수 있음
 	정의하자마자 실행되는  IIFE (즉시 호출되는 함수 표현식)로 사용될 수 있음
 	함수 선언과는 달리 끌어올려지지 않음. 함수 표현식을 정의하기 전에는 사용할 수 없음
 
 
 
-##### 화살표 함수 표현(arrow function expression)
+### 화살표 함수 표현(arrow function expression)
 	
 전통적인 함수표현(function)의 간편한 대안이지만 몇 가지 제한점이 있음
 	
@@ -47,7 +47,7 @@ var myFunction = function [name]([param1[, param2[, ..., paramN]]]) { statements
 	생성자(Constructor)로 사용할 수 없다
 	yield를 화살표 함수 내부에서 사용할 수 없다
 
-#
+#####
 	(param1, param2, …, paramN) => { statements }
 	(param1, param2, …, paramN) => expression
 	// 다음과 동일함:  => { return expression; }
@@ -61,15 +61,15 @@ var myFunction = function [name]([param1[, param2[, ..., paramN]]]) { statements
 
 
 
-##### 즉시 실행 함수 표현(IIFE, Immediately Invoked Function Expression)
-	정의되자마자 즉시 실행되는 Javascript Function
+### 즉시 실행 함수 표현(IIFE, Immediately Invoked Function Expression)
 
+정의되자마자 즉시 실행되는 Javascript Function
+
+```javascript
 	(function () {
    		statements
 	})();
-
-
-
+```
 
 
 
@@ -77,68 +77,9 @@ var myFunction = function [name]([param1[, param2[, ..., paramN]]]) { statements
 Element.matches()
 	var result = element.matches(selectorString);
 
+
 모듈 사용하기
 	require 함수 이용하여 모듈의 함수를 변수에 넣어 선언하고 변수를 호출하여 사용할 수 있음.
-
-
-
-
-
-
-
-### 고차 함수 (higher order function)
-	함수를 인자(argument)로 받을 수 있고, 함수의 형태로 리턴할 수 있는 함수
-
-
-1. 다른 함수를 인자로 받는 경우
-
-	function double(num) {
-		return num * 2;
-	}
-
-	function doubleNum(func, num) {
-		return func(num);
-	}
-
-	let output = doubleNum(double, 4);
-	console.log(output); // -> 8
-
-
-2. 함수를 리턴하는 경우
-
-	function adder(added) {
-		return function (num) {
-			return num + added;
-		};
-	}
-
-	let output = adder(5)(3); // -> 8
-	console.log(output); // -> 8
-
-	const add3 = adder(3);
-	output = add3(2);
-	console.log(output); // -> 5
-
-3. 함수를 인자로 받고, 함수를 리턴하는 경우
-
-	function double(num) {
-		return num * 2;
-	}
-
-	function doubleAdder(added, func) {
-		const doubled = func(added);
-		return function (num) {
-			return num + doubled;
-		};
-	}
-
-	doubleAdder(5, double)(3); // -> 13
-
-	const addTwice3 = doubleAdder(3, double);
-	addTwice3(2); // --> 8
-
-
-
 
 
 arguments 객체는 모든 함수 내에서 이용 가능한 지역 변수
@@ -147,7 +88,14 @@ arguments 객체는 모든 함수 내에서 이용 가능한 지역 변수
 
 
 
-내장 고차함수
+
+## 고차 함수 (higher order function)
+	함수를 인자(argument)로 받을 수 있고, 함수의 형태로 리턴할 수 있는 함수
+
+
+
+
+### 내장 고차함수
 
 	
 	slice
@@ -201,7 +149,9 @@ arguments 객체는 모든 함수 내에서 이용 가능한 지역 변수
 
 
 
+
 추상화
+
 	일반적으로 우리가 구현하고 싶은 서비스는 매우 추상적인것에서 출발한다.
 	우리는 구체화를 통해 서비스를 실현 가능하도록 만든다.
 	이에 반해 너무 구체적이고 사소한 것들의 집합은 추상화를 통해 처리해버릴 수 있다.
@@ -227,8 +177,7 @@ Advanced
 
 
 
-
-### 재귀(Recursion)
+## 재귀(Recursion)
 
 * 재귀적으로 사고하는 법
     * 잘게 쪼개어 사고하는 법
@@ -243,11 +192,42 @@ Advanced
 
 
 
-#### 재귀 함수
+### 재귀 함수
 
 1. 재귀 함수의 입력값과 출력값 정의하기
 2. 문제를 쪼개고 경우의 수를 나누기
 3. 단순한 문제 해결하기 (base case)
 4. 복잡한 문제 해결하기 (recursive case)
 5. 코드 구현하기
+
+
+
+
+
+#### JSON
+
+JavaScript Object Notation
+
+	데이터 교환을 위해 만들어진 객체 형태의 포맷
+
+	JSON.stringify : Object type을 JSON으로 변환 (seriealize)
+	JSON.parse : JSON을 Object type으로 변환 (deserialize)
+
+JSON 공식 문서
+
+
+자바스크립트의 객체와는 미묘하게 다른 JSON의 기본 규칙
+
+	키 : 반드시 큰따옴표를 붙여야 함 (자바스크립트 객체의 키 : 따옴표 없이 쓸 수 있음)
+	문자열 값 : 반드시 큰따옴표로 감싸야 함 (자바스크립트 객체의 문자열 값 : 어떠한 형태의 따옴표도 사용 가능)
+	키와 값 사이, 그리고 키-값 쌍 사이에 공백이 있으면 안됨
+
+
+
+Advanced contents
+다음 키워드는 재귀 함수를 더 효율적이고 멋지게 쓸 수 있는 방법을 나타냅니다. 
+* 재귀 함수와 메모리 사용량 간의 관계 (javascript recursion memory leak)
+* 꼬리 재귀 (tail recursion in js)
+* 하노이의 탑 재귀 (js tower of hanoi in recursion)
+* 조합 재귀 함수 (js combination in recursion)
 
