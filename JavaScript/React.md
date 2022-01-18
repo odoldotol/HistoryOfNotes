@@ -44,13 +44,13 @@ JSX 규칙
 
 
 
-###
+#####
 	Create React App 이 무엇인지 대략적으로나마 이해해라. 그리고 만들어진 프로젝트의 구조나 역할도 대략적으로라도 이해해봐라(Index.js, App.js …)
 
 
 
 
-### React Router DOM
+## React Router DOM
 	
 	페이지를 새로고침하지 않고도 주소를 변경할 수 있게 해줌
 	BrowserRouter가 상위에 작성되어 있어야 Route 컴포넌트를 사용할 수 있음
@@ -60,7 +60,7 @@ Import { BrowserRouter, Switch, Route, Link } from “react-router-dom”;
 ```
 
 
-##### BrowserRouter
+### BrowserRouter
 
 index.js
 
@@ -82,7 +82,7 @@ return (
 ```
 
 
-##### Switch, Route
+### Switch, Route
 
 	경로를 매칭해주는 역할을 하는 컴포넌트
 
@@ -104,7 +104,7 @@ return (
 
 
 
-##### Link
+### Link
 
 	경로를 연결해주는 컴포넌트
 	페이지를 새로 불러오지 않고 애플리케이션을 그대로 유지하여 HTML5 History API 를 이용해 페이지의 주소만 변경
@@ -116,18 +116,37 @@ return (
 
 
 
-### State & Props
+## State & Props
 
 
 
 
-#### Props
+### Props
 
 	부모 컴포넌트에서 자식 컴포넌트로 전달되어 자식컨포넌트에서 사용되는 것
+	어떤 타입의 값도 넣어 전달할 수 있도록 props는 객체의 형태임
+	읽기 전용
+
+```javascript
+function Parent() {
+	return (
+	…
+		<Child attribute={value} />
+	…
+	);
+};
+
+function Child(props) {
+	return (
+		…
+			{props.attribute}
+		…
+	);
+};
+```
 
 
-
-#### State
+### State
 
 	useState 를 호출한다는 것은 "state" 라는 변수를 선언하는 것과 같고 이 변수의 이름은 아무 이름으로 지어도 됨
 	일반적인 변수는 함수가 끝날 때 사라지지만, state 변수는 React에 의해 함수가 끝나도 사라지지 않음

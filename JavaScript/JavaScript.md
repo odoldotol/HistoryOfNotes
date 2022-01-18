@@ -7,6 +7,22 @@ http://junil-hwang.com/blog/javascript-es6-spec/
 	Use the "use strict" directive.​
 	Declare variables with const and let.​
 
+
+## JavaScript types
+
+
+* 원시 값(Primitive values) (언어의 최고 로우레벨에서 직접 표현되는 불변 데이터)
+    * Boolean 타입
+    * Null 타입 // 식별되지 않은 것 // 아무런 객체를 가리키지 않음을 표현 // 존재하지 않을 때 그 객체 대신 사용가능 ( typeof null // “object” )
+    * Undefined 타입 // 전역 객체의 속성 // 선언한 후 할당하지 않은 곳에 자동으로 할당됨 ( typeof undefined // "undefined" )
+    * Number 타입
+    * BigInt 타입
+    * String 타입
+    * Symbol 타입
+* 객체(Objects) (collections of properties)
+
+
+
 #####
 DOM과 JavaScript의 차이에 대해 이해할 수 있다. (Node vs element) (window)
 
@@ -28,8 +44,17 @@ DOM과 JavaScript의 차이에 대해 이해할 수 있다. (Node vs element) (w
 
 
 #####
-	Array.split()
-	Array.join()
+	Array.pop() // 맨 뒤 요소 삭제
+	Array.push(ele) // 맨 뒤에 요소 삽입
+	Array.unshift(ele) // 맨 앞에 요소 삽입
+	Array.shift() // 맨 앞 요소 삭제
+	Array.splice(index , deleteCount , item1 , item2 , …) // index 위치부터 deleteCount 만큼 요소 삭제하고 …item 삽입
+	Array.slice(startIndex , endIndex) // startIndex 위치부터 endIndex 전까지를 요소로 갖는 새로운 배열을 shallow copy로 반환
+	Array.concat(arr)	// Array의 요소와 arr 의 요소를 순서대로 갖는 새로운 하나의 배열 반환 = [...Array , …aar] ( spread syntax )
+	Array.join(separator) // 모든 배열 요소가 문자열로 변환되고 연결한 하나의 문자열을 반환 // separator(optional) : 각 요소를 구분할 문자열 , 기본값 = “,”
+
+#####
+	String.split(separator, limit) // separator
 
 
 #####
@@ -160,8 +185,6 @@ onclick 에 직접 할당하는 것과 addEventListener의 차이
 return value.length >= 4 // boolean 이 리턴됨
 Array.isArray(arr) // boolean
 
-Array.concat(arr)	// Array의 요소와 arr 의 요소를 순서대로 갖는 새로운 하나의 배열
-	= [...Array , …aar] // spread syntax
 
 
 
