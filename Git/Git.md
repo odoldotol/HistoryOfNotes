@@ -1,8 +1,7 @@
 # Git
 
-[마크다운](https://gist.github.com/ihoneymon/652be052a0727ad59601)
 
-###### SSH key 이용하기
+SSH key 이용하기
     1. ssh-keygen : ssh 키를 생성
     2. cat ~/.ssh/id_rsa.pub : ssh 공개키(Public Key)를 출력
     3. 복사하여 GitHub > settings > SSH and GPG keys 에 새로운 키 추가
@@ -23,7 +22,10 @@
     * push <origin> <branch> : Local Repository에 저장되어 있는 commit 기록들을 내 Remote Repository 에 업로드
     * init : 기존 디렉토리를 Git Repository(Local)로 변환하거나 새로운 Repository를 초기화
     * remote add <shortname> <Repository 주소> : Local Repository를 Remote Repository와 연결
+    * remote remove <shortname> : Remote Repository와 연결 해제
     * remote -v : 현재의 Local Repository와 연결된 모든 Remote Repository 목록을 확인
+
+
 
 
 * Git Repository의 commit되지 않은 변경 사항을 취소할 수 있다.
@@ -32,4 +34,5 @@
 * 협업을 위한 git 개념을 이해할 수 있다.
     * branch, merge의 개념
     * remote repository에서 origin과 upstream의 차이점
+
 

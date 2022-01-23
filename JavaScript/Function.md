@@ -49,15 +49,12 @@
 
 #####
 	(param1, param2, …, paramN) => { statements }
-	(param1, param2, …, paramN) => expression
-	// 다음과 동일함:  => { return expression; }
 
-	// 매개변수가 하나뿐인 경우 괄호는 선택사항:
-	(singleParam) => { statements }
-	singleParam => { statements }
+	(param1, param2, …, paramN) => expression // 다음과 동일함:  => { return expression; }
 
-	// 매개변수가 없는 함수는 괄호가 필요:
-	() => { statements }
+	(singleParam) => { statements } // 매개변수가 하나뿐인 경우 괄호는 선택사항 : singleParam => { statements }
+
+	() => { statements } // 매개변수가 없는 함수는 괄호가 필요:
 
 
 
@@ -95,6 +92,38 @@ arguments 객체는 모든 함수 내에서 이용 가능한 지역 변수
 
 
 
+
+#### 콜백 함수(Callback function)
+	
+	고차함수의 인자로 전달되는 함수
+
+#### caller함수
+
+	콜백 함수를 전달받은 함수
+
+
+
+### 클로저 Closure (폐쇄)
+
+```javascript	
+const useMe = func();
+	// 이렇게 func() 의 리턴값(리턴값은 함수(클로저)이다)을 useMe 에 할당해주게되면 어떤일이 일어날까
+
+function func() {
+	…
+	return function(){                     // 클로저 함수
+		// 이 함수가 useMe 에 할당되어있다.
+		// 이 함수가 … 부분을 사용한다면, 사용된 부분은 클로저에 저장된다.
+		// useMe 를 통해서 … 부분을 사용하거나 업데이트할 수 있다!!!
+	}
+}
+```
+
+
+... (spread syntax)를 사용하여 인자의 개수를 파악할 수 있고, 각각의 인자에 접근할 수 있어야 합니다.
+
+
+
 ### 내장 고차함수
 
 	
@@ -102,6 +131,13 @@ arguments 객체는 모든 함수 내에서 이용 가능한 지역 변수
 
 
 	forEach
+		 주어진 함수를 배열 요소 각각에 대해 실행
+
+		arr.forEach(callback(currentvalue[, index[, array]])[, thisArg])
+		
+		Array.forEach(element => console.log(element));
+
+	indexOf
 
 
 	find
@@ -200,7 +236,8 @@ Advanced
 4. 복잡한 문제 해결하기 (recursive case)
 5. 코드 구현하기
 
-
+while 같은 반복문 쓸수잇으면 재귀는 되도록 안쓰는게 좋은듯
+재귀가 더 효율적일떄만 쓰자
 
 
 
