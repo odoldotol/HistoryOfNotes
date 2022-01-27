@@ -67,6 +67,10 @@ DOM과 JavaScript의 차이에 대해 이해할 수 있다. (Node vs element) (w
 
 
 #####
+	var boolean = a === b && c
+
+
+#####
 	++i
 	i++
 	x+=y
@@ -96,9 +100,7 @@ DOM과 JavaScript의 차이에 대해 이해할 수 있다. (Node vs element) (w
 	break return continue
 
 
-#####
-	객체 구조분해
-
+객체 구조분해 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#%EA%B0%9D%EC%B2%B4_%EA%B5%AC%EC%A1%B0_%EB%B6%84%ED%95%B4
 
 
 
@@ -220,7 +222,7 @@ Event reference https://developer.mozilla.org/ko/docs/Web/Events
 
 
 #####
-	[onClick이벤트에 event객체 외 다른 인자 전달하기](https://velog.io/@haribo/onClick%EC%9D%B4%EB%B2%A4%ED%8A%B8%EC%97%90-event%EA%B0%9D%EC%B2%B4-%EC%99%B8-	%EB%8B%A4%EB%A5%B8-%EC%9D%B8%EC%9E%90-%EC%A0%84%EB%8B%AC%ED%95%98%EA%B8%B0)
+	[onClick이벤트에 event객체 외 다른 인자 전달하기](https://velog.io/@haribo/onClick%EC%9D%B4%EB%B2%A4%ED%8A%B8%EC%97%90-event%EA%B0%9D%EC%B2%B4-%EC%99%B8-	%EB%8B%A4%EB%A5%B8-%EC%9D%B8%EC%9E%90-%EC%A0%84%EB%8B%AC%ED%95%98%EA%B8%B0, “onClick이벤트에 event객체 외 다른 인자 전달하기 link”)
 
 ## 비동기
 
@@ -311,6 +313,7 @@ https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Pr
 	await 키워드는 JavaScript 런타임이 이 라인에서 비동기 코드를 일시 중지하여 비동기 함수 호출이 결과를 반환할 때 까지 기다리게 함
 	그러나 외부의 다른 동기 코드는 실행될 수 있도록 한다
 	작업이 완료되면 코드는 계속 이어져서 실행
+	트라이 캐치로 에러 관리
 
 async/await와 함께 다시 쓰는 promise code
 
